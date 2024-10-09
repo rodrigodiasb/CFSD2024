@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com Botões em Grade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colunas responsivas */
+            gap: 20px;
+            width: 90%; /* Ajusta a largura para 90% da tela */
+            max-width: 800px; /* Limita a largura máxima */
+        }
+
+        .button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .icon {
+            display: block;
+            margin: 0 auto 10px;
+            font-size: 40px;
+        }
+
+        @media (max-width: 600px) { /* Estilos para telas menores */
+            .button {
+                font-size: 16px; /* Reduz o tamanho da fonte em dispositivos menores */
+                padding: 15px; /* Ajusta o padding */
+            }
+
+            .icon {
+                font-size: 30px; /* Reduz o tamanho do ícone */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <a href="https://www.bombeiros.ms.gov.br/" class="button">
+            <span class="icon">🚒</span>
+            Bombeiro
+        </a>
+        <a href="https://forms.gle/iqdwe6PYcjH56fTQ6" class="button">
+            <span class="icon">📄</span>
+            Solicitações
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoE-09-9YwLEqpzVk2nGYKb8-HOO3bzQWy2SPT4LJ87pOlGyrxDdM3FlvoTqGwp1tCsRSOYJIzvG3e/pubhtml" class="button">
+            <span class="icon">📊</span>
+            Escala de Serviço
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1LoNCdPd9eVxzp03mxwbS3cCMcv4OEmgAAOZZD8vTi7Q/edit?usp=drivesdk" class="button">
+            <span class="icon">🔍</span>
+            Acompanhamento
+        </a>
+        <a href="https://drive.google.com/file/d/1uRhnNBIBy6DkfJnsTH2_A7QmNWgZZH6B/view?usp=sharing" class="button">
+            <span class="icon">📁</span>
+            Escala de Adjunto
+        </a>
+        <a href="https://drive.google.com/drive/folders/11FPdG4S90vhJTGNuBOlNmcrGzq8jkErG?usp=drive_link" class="button">
+            <span class="icon">🗂️</span>
+            Drive
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1UM5jsYjNbrcH0vqXDrifIwx2vGsqdWmAczTyLcHt5d0/edit?usp=sharing" class="button">
+            <span class="icon">📋</span>
+            QTS Cronograma
+        </a>
+    </div>
+
+</body>
+</html>
